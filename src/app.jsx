@@ -1,7 +1,7 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
 
-import './styles/main.css';
+import './main.css';
 
 import Header from './components/header.jsx';
 import Footer from './components/footer.jsx';
