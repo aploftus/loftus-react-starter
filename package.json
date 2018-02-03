@@ -7,11 +7,13 @@
     "compile": "webpack",
     "compile-dev": "webpack -d --watch",
     "lint": "eslint src && eslint index.js",
-    "start-dev": "nodemon index.js",
-    "start": "npm run compile && node index.js"
+    "postinstall": "NODE_ENV=production webpack --config ./webpack.config.js --progress --colors",
+    "start-dev": "npm run compile && nodemon index.js",
+    "start": "node index.js",
+    "test": "echo \"Error: no test specified\" && exit 1"
   },
   "engines": {
-    "node": "8.9.4"
+    "node": "9.4.0"
   },
   "repository": {
     "type": "git",
@@ -32,23 +34,23 @@
   },
   "homepage": "https://github.com/aploftus/loftus-react-starter#readme",
   "devDependencies": {
+  },
+  "dependencies": {
     "babel-core": "^6.26.0",
     "babel-eslint": "^8.2.1",
     "babel-loader": "^7.1.2",
     "babel-preset-env": "^1.6.1",
     "babel-preset-react": "^6.24.1",
+    "body-parser": "^1.18.2",
     "css-loader": "^0.28.9",
     "eslint": "^4.15.0",
+    "express": "^4.16.2",
     "file-loader": "^1.1.6",
     "nodemon": "^1.14.11",
+    "react": "^16.2.0",
+    "react-dom": "^16.2.0",
     "style-loader": "^0.19.1",
     "url-loader": "^0.6.2",
     "webpack": "^3.10.0"
-  },
-  "dependencies": {
-    "body-parser": "^1.18.2",
-    "express": "^4.16.2",
-    "react": "^16.2.0",
-    "react-dom": "^16.2.0"
   }
 }
