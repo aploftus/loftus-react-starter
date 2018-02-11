@@ -18,3 +18,9 @@ Compile with Webpack
 
 Start the development server
 ```npm start-dev```
+
+Items to update when using this to start another project:
+---
+- [ ] package.json (project name)
+- [ ] dist/index.html (site name)
+- [ ] git-hooks (run the bash script located in the top of the file to enable linter)
